@@ -1,8 +1,109 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#wrapper{
+  margin-top: 180px;
 }
 
-a {
-  color: #00B7FF;
+.login_box {
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px 0 rgb(68 68 68 / 4%);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.tit{
+  text-align: center;
+}
+
+.sub_tit{
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.txt {
+  position: relative;
+}
+
+.login_box .txt div{
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.login_box .txt input{
+  position: absolute;
+  right: 0;
+  width: 70%;
+}
+
+.login_btn{
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.login_btn button{  
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.find_box ul{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.find_box ul li{
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+}
+
+.find_box ul li::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -7px;
+  width: 1px;
+  height: 12px;
+  border-radius: 0.5px;
+  background-color: #dadada;
+}
+
+/* first-child 선택자를 먼저 */
+.find_box ul li:first-child::after{
+  width: 0px;
+}
+
+.find_box ul li a{
+  text-decoration-line: none;
+  color: #888;
+}
+
+.join_box{
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px 0 rgb(68 68 68 / 4%);
+  padding: 20px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.join_box .txt{
+  padding-bottom: 10px;;
+}
+
+.join_box .txt input{
+  width: 98%;
+}
+
+.join_box .txt .txt_input{
+  width: 76%;
+}
+
+.join_box .txt .txt_input2{
+  width: 83%;
 }

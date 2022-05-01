@@ -3,11 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var dotenv = require('dotenv');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var memberRouter = require('./routes/member/controller');
 
 var app = express();
+dotenv.config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,10 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //라우터 연결
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/member', memberRouter);
 
-//로컬 포트로 서버 구동하도록함
-port = 3000;
+//포트 지정
+port = process.env.PORT;
 
 app.listen(port, () =>{
   console.log("server : " + port);
