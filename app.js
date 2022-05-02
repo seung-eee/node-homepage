@@ -11,6 +11,18 @@ var memberRouter = require('./routes/member/controller');
 var app = express();
 dotenv.config();
 
+var sequelize = require('./models').sequelize;
+
+const db = function (){
+  try {
+    sequelize.sync();
+    console.log("초기화 완료");
+  } catch (error) {
+    console.log("초기화 실패" + error);
+  }
+}
+db();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
